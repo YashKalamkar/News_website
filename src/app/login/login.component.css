@@ -1,0 +1,11 @@
+.modal-content{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header img{
+    width: 80px;
+    height: 80px;
+}

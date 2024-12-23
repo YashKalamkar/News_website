@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="left-header">
+        <a href="#">NEWS APP</a>
+    </div>
+    <div class="middle-header">
+        <a routerLink="">Lastest </a>
+        <a routerLink="business">Business </a>
+        <a routerLink="technology">Technology </a>
+        <a routerLink="entertainment">Entertainment </a>
+        <a routerLink="sport">Sports </a>
+        <a routerLink="science">Science </a>
+        <a routerLink="health">Health </a>
+    </div>
+    <div class="right-header">
+        <button (click)="refreshPage()"><fa-icon [icon]="faRefresh"></fa-icon></button>
+        <button type="button" (click)="openLoginModal()">Log in</button>
+        <button type="button" (click)="openSignupModal()">Sign up</button>
+    </div>
+</div>
+<router-outlet></router-outlet>

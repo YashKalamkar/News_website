@@ -1,0 +1,17 @@
+<div class="news-container">
+    <div class="card" *ngFor="let item of displayedNews">
+      <div class="card-left">
+        <img src={{item.images?.thumbnail}} alt="news thumbnail" (error)="onImageError($event)" />
+      </div>
+      <div class="card-right">
+        <h4 class="card-news-title">{{item.title}}</h4>
+        <p class="card-news-author name"><span>Author : </span>{{item.publisher}}</p>
+        <p class="card-news-description"><span>Description : </span>{{item.snippet}}</p>
+        <p class="card-news-published"><span>Published : </span>{{ item.formattedTime }} </p>
+        <button class="read-icon" (click)="openNews(item.newsUrl)">READ NEWS<img src="../../assets/read-more.png" alt="read icon"></button>
+      </div>
+    </div>
+  
+    <button class="read-more" *ngIf="displayedNews.length < scienceNewsDisplay.length" (click)="loadMore()">LOAD MORE<img src="../../assets/spinner-of-dots.png" alt="read more icon"></button>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-white">
+        <img src="../../assets/user.gif" alt="user icon">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSignup()">
+          <div class="mb-3">
+            <label for="signupUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="signupUsername" [(ngModel)]="signupUsername" name="signupUsername" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword" [(ngModel)]="signupPassword" name="signupPassword" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p class="text-muted">Already have an account? <a href="#" (click)="openLoginModal()" data-bs-dismiss="modal">Log in here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
